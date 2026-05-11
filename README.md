@@ -241,7 +241,7 @@ cargo test
 Run all feature tests:
 
 ```bash
-cargo test --all-features1
+cargo test --all-features
 ```
 
 Run only stress tests:
