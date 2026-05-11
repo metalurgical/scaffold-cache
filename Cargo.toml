@@ -1,0 +1,24 @@
+[package]
+name = "scaffold-cache"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "A high-performance sharded in-process cache for Rust"
+
+[dependencies]
+ahash = "0.8"
+parking_lot = "0.12"
+tokio = { version = "1", features = ["rt", "rt-multi-thread", "macros", "time", "sync"], optional = true }
+async-trait = { version = "0.1", optional = true }
+
+[dev-dependencies]
+criterion = "0.5"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "time", "sync"] }
+
+[features]
+default = []
+async-loader = ["tokio", "async-trait"]
+
+[[bench]]
+name = "cache_bench"
+harness = false

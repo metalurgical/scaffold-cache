@@ -1,0 +1,32 @@
+# Rust
+/target/
+Cargo.lock
+
+# Backup files
+**/*.rs.bk
+
+# IDEs
+.idea/
+.vscode/
+
+# RustRover / IntelliJ
+*.iml
+out/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+
+# Logs
+*.log
+
+# Coverage / profiling
+coverage/
+*.profraw
+*.profdata
