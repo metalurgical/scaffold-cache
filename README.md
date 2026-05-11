@@ -241,19 +241,19 @@ cargo test
 Run all feature tests:
 
 ```bash
-cargo test --all-features -- --test-threads 1
+cargo test --all-features1
 ```
 
 Run only stress tests:
 
 ```bash
-cargo test --test stress_test -- --test-threads 1
+cargo test --test stress_test
 ```
 
 Run stress tests in release mode:
 
 ```bash
-cargo test --release --test stress_test -- --test-threads 1
+cargo test --release --test stress_test
 ```
 
 Run Clippy:
@@ -274,8 +274,8 @@ Recommended verification gate:
 ```bash
 cargo fmt --all --check
 cargo clippy --all-targets --all-features -- -D warnings
-cargo test --all-features -- --test-threads 1
-cargo test --release --test stress_test -- --test-threads 1
+cargo test --all-features
+cargo test --release --test stress_test
 ```
 
 ## Benchmarks
@@ -340,8 +340,8 @@ Before using this on a critical path, run:
 cargo fmt --all --check
 cargo clippy --all-targets --all-features -- -D warnings
 cargo test --doc
-cargo test --all-features -- --test-threads 1
-cargo test --release --test stress_test -- --test-threads 1
+cargo test --all-features
+cargo test --release --test stress_test
 cargo bench --bench cache_bench -- --measurement-time 15 --sample-size 20
 ```
 
